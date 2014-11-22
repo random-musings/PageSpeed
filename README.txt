@@ -78,28 +78,31 @@ Optimization of project-webperf.html
 
 
 Optimization of file views/pizza.html
-- asynchronously load images 
+1. asynchronously load images 
 	pizza.png
 	pizzeria.png
-- asynchronously load main.js
--split bootstrap.css into 4 files
+2. asynchronously load main.js
+3. split bootstrap.css into 4 files
 	bootstrap-sm.css
 	bootstrap-md.css
 	bootstrap-lg.css
 	bootstrap.css
--create a new image pizza_bg.png to serve
+4. create a new image pizza_bg.png to serve
  as a background.
  this file is already size to 73x100 pixels
  round the 73.333px of height to 73px 
  down grade the quality 
-
+5. compressed and resized pizzeria.jpg
+6. compressed and removed empty space around pizza.jpg
+7. asynchronously loaded bootstrap.css in the main.js file
+8. inlined style.css
 
 Optmization of views/js/main.js
--remove the repetitive division in the 
+1. remove the repetitive division in the 
  main.js updatepositions function 
 this drops frame rates to 3ms or less
 
--optmized the initialization of pizzas by removing the division
+2. optmized the initialization of pizzas by removing the division
 since the background floating pizzas are setup at a set height
 I replaced the division with a modulus check
 
