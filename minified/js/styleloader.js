@@ -1,0 +1,1 @@
+function loadCss(e,t){var n=document;if(!n.getElementById(e)){var r=n.getElementsByTagName("head")[0];var i=n.createElement("link");i.id=e;i.rel="stylesheet";i.type="text/css";i.href=t;i.media="all";r.appendChild(i)}}loadCss("defaultStyle","css/style.css");loadCss("specialFont","//fonts.googleapis.com/css?family=Open+Sans:400,700");
