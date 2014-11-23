@@ -3,9 +3,12 @@
 <head>  
 	<meta http-equiv="Cache-control" content="public"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--split the bootstrap css into media specific files-->
   <link rel="stylesheet" href="css/bootstrap-lg.css" media="screen and min-width:1200px">
   <link rel="stylesheet" href="css/bootstrap-md.css" media="screen and min-width:922px">
   <link rel="stylesheet" href="css/bootstrap-sm.css" media="screen and min-width:768px">
+	
+	<!--inlined the style.css-->
 	<style type="text/css">
 	* {
   -webkit-box-sizing: border-box;
@@ -89,6 +92,7 @@
     </div>
     <div id="callToAction" class="row">
       <div class="col-md-4">
+				<!--load this image asynchronously after the page has been loaded-->
         <img id="pizzeriaImg" src="images/transparent.png" class="img-responsive"> <!-- Image credit to: http://commons.wikimedia.org/wiki/File:HK_TST_night_%E5%98%89%E8%98%AD%E9%81%93_Granville_Road_restaurant_Paisano's_Pizzeria_pizza_Dec-2013.JPG -->
       </div>
       <div class="col-md-8">
@@ -157,6 +161,7 @@
         <div id="randomPizzas" class="row">
           <div id="pizza0" class="randomPizzaContainer" style="width:33.33%;">
             <div class="col-md-6">
+						<!--load this image asynchronously after the page has been loaded-->
               <img id="pizzaUdacity" src="images/transparent.png" class="img-responsive">
             </div>
             <div class="col-md-6">
@@ -190,6 +195,7 @@
     </div>
     <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
   </div>
+	<!--load the javascript asynchronously after the page has been loaded-->
   <script type="text/javascript" src="js/main.js" async></script>
 </body>
 

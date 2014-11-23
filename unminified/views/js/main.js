@@ -503,6 +503,8 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+	
+	//moved the division outside of the loop because it is an expensive operation
 	var heightOffset =(document.body.scrollTop / 1250);
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(heightOffset + (i % 5));
@@ -519,8 +521,10 @@ function updatePositions() {
   }
 }
 
+//load the bootstrap CSS after the page has been loaded
 function loadCss()
 {
+	//credit goes to 
 	//http://stackoverflow.com/questions/574944/how-to-load-up-css-files-using-javascript
 	var $ = document; // shortcut
 	var cssId = 'myCss';  // you could encode the css path itself to generate id..
@@ -553,8 +557,11 @@ window.addEventListener('scroll', updatePositions);
     elem.style.height = "100px";
     elem.style.width = "73px";
 		currMod =(i % cols);
-    elem.basicLeft = currMod * s;
-		heightOff += (currMod===0)?s:0;
+    elem.basicLeft = currMod * s; 
+		
+		//the division operation was executed here- division is expensive 
+		//and unnecessary so we replaced it with a modulos operation
+		heightOff += (currMod===0)?s:0; 
     elem.style.top = ''+heightOff+ 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
@@ -563,7 +570,8 @@ window.addEventListener('scroll', updatePositions);
 //load non-critical style sheets
 loadCss();
 
-//load images
+
+//load images after the page has been loaded
 pizzaUdacity.src ="images/pizza.png";
 pizzaCameron.src ="images/pizza.png";
 pizzeriaImg.src = "images/pizzeria.jpg";

@@ -2,12 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+		<!-- stated the caching policy so that future loads will be quicker-->
 		<meta http-equiv="Cache-control" content="public"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Cameron web performance">
     <meta name="author" content="Udacity Student">
     <title>Cameron Pitman: Portfolio</title>
-
+		<!--added the media tag of print so it can be ignored upon initial loading-->
     <link href="css/print.css" rel="stylesheet" media="print">
 
     <script>
@@ -26,6 +27,7 @@
 
   <body>
     <header>
+			<!--scaled and compressed the profile pic-->
       <a href="/"><img src="img/profilepic.jpg" class="img-responsive"></a>
       <p>Cameron Pittman<br><span>Course Developer</span></p>
     </header>
@@ -50,7 +52,8 @@
     <footer>
       <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
     </footer>
-		
+			<!--load the css file via an iframe then add it as a style element
+		this was the quickest way to load the style-->
 			<iframe id="frmFile" src="css/style.css" onload="LoadFile();" style="display: none;"></iframe>
 		<script type="text/javascript">
 			function LoadFile()

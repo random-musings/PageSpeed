@@ -2,12 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+		<!--stated the caching policy so that future loads will be quicker-->
 		<meta http-equiv="Cache-control" content="public"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Cameron Profile">
     <meta name="author" content="Udacity Student">
     <title>Cameron Pittman: Portfolio</title>
 
+		<!--added media tag of print so it can be ignroed when initially loading it-->
     <link href="css/print.css" rel="stylesheet" media="print">
 
     <script>
@@ -18,13 +20,13 @@
       ga('create', 'UA-XXXX-Y');
       ga('send', 'pageview');
     </script>
+		<!--loaded javascript asynchronously-->
     <script src="http://www.google-analytics.com/analytics.js" async></script>
     <script src="js/perfmatters.js" async></script>
   </head>
-
   <body>
-	
     <header>
+		<!--profile pic is scaled down and the image quality reduced-->
       <a href="/"><img src="img/profilepic.jpg"></a>
       <p>Cameron Pittman<br><span>Course Developer</span></p>
     </header>
@@ -37,30 +39,32 @@
       <div class="content">
         <ul>
           <li>
-            <img src="img/2048_thumbnail.jpg">
+            <img src="img/2048_thumbnail.jpg"><!-- created thumbnail and sized it correctly-->
             <a href="project-2048.html">Build Your Own 2048!</a>
             <p>I made my own version of 2048. How cool is that!?</p>
           </li>
 
           <li>
-            <img src="img/webperf_thumbnail.jpg">
+            <img src="img/webperf_thumbnail.jpg"><!-- created thumbnail and sized it correctly-->
             <a href="project-webperf.html">Website Performance Optimization</a>
             <p>Hey... this class looks familiar.</p>
           </li>
 
           <li>
-            <img src="img/mobileweb_thumbnail.jpg">
+            <img src="img/mobileweb_thumbnail.jpg"><!-- created thumbnail and sized it correctly-->
             <a href="project-mobile.html">Mobile Web Development</a>
             <p>Making mobile apps isn't so hard after all.</p>
           </li>
 
           <li>
-            <img src="img/pizzeria_thumbnail.jpg">
+            <img src="img/pizzeria_thumbnail.jpg"><!-- created thumbnail and sized it correctly-->
             <a href="views/pizza.html">Cam's Pizzeria</a>
             <p>Who wants a performant pizza?</p>
           </li>
         </ul>
     </div>
+		
+		<!--load the css style after loading the page via javascript-->
 	<iframe id="frmFile" src="css/style.css" onload="LoadFile();" style="display: none;"></iframe>
 		<script type="text/javascript">
 			function LoadFile()
@@ -73,9 +77,7 @@
 				cssScript.innerHTML = strRawContents;
 				head.appendChild(cssScript);
 			}
-			
 		</script>
-		
     <footer>
       <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
     </footer>
