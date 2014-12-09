@@ -106,6 +106,22 @@ this drops frame rates to 3ms or less
 since the background floating pizzas are setup at a set height
 I replaced the division with a modulus check
 
+3. //line 452 
+move length check of random pizza container outside of for loop
+function: changePizzaSizes()
+var pizzaSize = document.querySelectorAll(".randomPizzaContainer").length;
+    for (var i = 0; i < pizzaSize; i++) {
+		
+4. //line473 
+moved pizza div element outside of for loop
+var pizzasDiv = document.getElementById("randomPizzas");
+for (var i = 2; i < 100; i++) {
+  pizzasDiv.appendChild(pizzaElementGenerator(i));
+}
 
-
-
+5. //line 508
+function: updatePositions()
+	created itemsLength variable to hold item count
+	used that to create the for loop upper bounds check
+	var itemsLength = items.length;
+  for (var i = 0; i < itemsLength; i++) {...}
